@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_content_related_pages",
+  "info": {
+    "displayName": "RelatedPage",
+    "icon": "external-link-square-alt"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "page": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::page.page"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_content_titles",
+  "info": {
+    "displayName": "Title",
+    "icon": "grip-lines"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
