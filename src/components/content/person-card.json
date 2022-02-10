@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_content_person_cards",
+  "info": {
+    "displayName": "PersonCard",
+    "icon": "smile-beam"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

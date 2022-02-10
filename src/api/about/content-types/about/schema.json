@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "abouts",
+  "info": {
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "About",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cards": {
+      "type": "dynamiczone",
+      "components": [
+        "content.about-card",
+        "content.person-card",
+        "content.related-page",
+        "content.title"
+      ]
+    }
+  }
+}
