@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_content_external_links",
+  "info": {
+    "displayName": "ExternalLink",
+    "icon": "external-link-alt"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string",
+      "regex": "/^(ftp|http|https):\\/\\/[^ \"]+$/"
+    }
+  }
+}
