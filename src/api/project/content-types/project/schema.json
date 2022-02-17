@@ -18,7 +18,8 @@
         "content.person-card",
         "content.related-page",
         "content.title",
-        "content.image-card"
+        "content.image-card",
+        "content.external-link"
       ]
     }
   }

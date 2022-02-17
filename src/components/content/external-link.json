@@ -2,13 +2,16 @@
   "collectionName": "components_content_external_links",
   "info": {
     "displayName": "ExternalLink",
-    "icon": "external-link-alt"
+    "icon": "external-link-alt",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "url": {
-      "type": "string",
-      "regex": "/^(ftp|http|https):\\/\\/[^ \"]+$/"
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
     }
   }
 }
