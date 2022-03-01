@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "frontpages",
+  "info": {
+    "singularName": "frontpage",
+    "pluralName": "frontpages",
+    "displayName": "Frontpage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "background": {
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
