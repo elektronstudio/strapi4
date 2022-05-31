@@ -28,11 +28,7 @@
       "type": "media",
       "multiple": true,
       "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
+      "allowedTypes": ["images", "files", "videos"],
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -44,14 +40,6 @@
       "relation": "manyToMany",
       "target": "api::event.event",
       "mappedBy": "projects"
-    },
-    "slug": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "uid"
     },
     "streamkey": {
       "pluginOptions": {
@@ -89,11 +77,7 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
+      "allowedTypes": ["images", "files", "videos"],
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -115,6 +99,30 @@
         }
       },
       "type": "richtext"
+    },
+    "authors": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string"
+    },
+    "details": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "uid"
     }
   }
 }

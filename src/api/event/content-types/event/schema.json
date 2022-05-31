@@ -27,7 +27,7 @@
     "slug": {
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "type": "uid"
@@ -42,11 +42,7 @@
       "type": "media",
       "multiple": true,
       "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
+      "allowedTypes": ["images", "files", "videos"],
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -69,14 +65,6 @@
       },
       "type": "datetime"
     },
-    "description": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "text"
-    },
     "streamkey": {
       "pluginOptions": {
         "i18n": {
@@ -93,7 +81,18 @@
       },
       "type": "string"
     },
-    "intro": {
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images", "files", "videos"],
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "details": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -101,19 +100,38 @@
       },
       "type": "text"
     },
-    "thumbnail": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "type": "media",
-      "multiple": false,
+    "live": {
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "type": "boolean",
+      "default": true
+    },
+    "settings": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "text"
+    },
+    "description": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
+    },
+    "intro": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
     }
   }
 }
