@@ -1,20 +1,30 @@
-'use strict';
+"use strict";
+
+const WebSocket = require("ws");
 
 module.exports = {
-  /**
-   * An asynchronous register function that runs before
-   * your application is initialized.
-   *
-   * This gives you an opportunity to extend code.
-   */
-  register(/*{ strapi }*/) {},
+  register() {},
 
-  /**
-   * An asynchronous bootstrap function that runs before
-   * your application gets started.
-   *
-   * This gives you an opportunity to set up your data model,
-   * run jobs, or perform some special logic.
-   */
-  bootstrap(/*{ strapi }*/) {},
+  bootstrap({ strapi }) {
+    const wss = new WebSocket.Server({ server: strapi.server.httpServer });
+    wss.on("connection", (ws) => {
+      ws.on("message", (message) => {
+        let parsedMessage = null;
+        try {
+          parsedMessage = JSON.parse(message.toString());
+        } catch {}
+        if (parsedMessage) {
+          wss.clients.forEach((client) => {
+            if (client.readyState === WebSocket.OPEN) {
+              client.send(JSON.stringify(parsedMessage));
+            }
+          });
+        }
+      });
+    });
+
+    // strapi.entityService
+    //   .findMany("api::project.project")
+    //   .then((res) => console.log(res));
+  },
 };
