@@ -22,6 +22,7 @@ module.exports = {
         }
       });
     });
+    strapi.wss = wss;
 
     // strapi.entityService
     //   .findMany("api::project.project")
