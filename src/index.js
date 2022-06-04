@@ -14,15 +14,16 @@ module.exports = {
         }
       });
     strapi.storeMessage = async (message) => {
-      await strapi.entityService.create("api::message.message", {
+      const a = await strapi.entityService.create("api::message.message", {
         data: {
           channel: message.channel,
           type: message.type,
-          user_id: message.userid, // userid
-          user_name: message.username, // username
+          userid: message.userid,
+          username: message.username,
           value: message.value,
         },
       });
+      console.log(a);
     };
     strapi.wss = wss;
 
