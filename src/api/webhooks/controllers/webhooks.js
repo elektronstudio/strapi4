@@ -1,10 +1,13 @@
 module.exports = {
-  async test(ctx, _next) {
-    ctx.body = "test";
-    strapi.wss.clients.forEach((client) => {
-      if (client.readyState === 1) {
-        client.send(JSON.stringify({ message: "test" }));
-      }
-    });
+  async video(ctx, _next) {
+    ctx.request.accepts("application/json");
+    const message = {
+      type: "VIDEO",
+      channel: "elektron",
+      value: ctx.request.body,
+      store: true,
+    };
+    strapi.storeMessage(message);
+    ctx.response.send("OK");
   },
 };

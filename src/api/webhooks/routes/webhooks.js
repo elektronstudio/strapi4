@@ -1,9 +1,9 @@
 module.exports = {
   routes: [
     {
-      method: "GET",
-      path: "/webhooks/test",
-      handler: "webhooks.test",
+      method: "POST",
+      path: "/webhooks/video",
+      handler: "webhooks.video",
     },
   ],
 };
