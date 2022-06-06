@@ -28,7 +28,11 @@
       "type": "media",
       "multiple": true,
       "required": false,
-      "allowedTypes": ["images", "files", "videos"],
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -77,7 +81,11 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images", "files", "videos"],
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
       "pluginOptions": {
         "i18n": {
           "localized": false
