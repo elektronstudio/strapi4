@@ -18,9 +18,10 @@ module.exports = {
       path: `${dir}/`,
     });
     const processFile = (file) => {
-      return `https://${options.cdn}/${file.Key}`;
+      const filename = file.Key.replace(/.*\//, "");
+      return { filename, src: `https://${options.cdn}/${file.Key}` };
     };
-    ctx.response.send(files.Contents.map(processFile));
+    ctx.response.send(files.Contents.map(processFile).reverse());
   },
 
   async upload(ctx, _next) {
