@@ -1,6 +1,5 @@
 const imageDataURI = require("image-data-uri");
 const Spaces = require("do-spaces");
-const { writeFile } = require("fs/promises");
 
 const options = strapi.config.get("plugin.upload.providerOptions");
 const spaces = new Spaces.Spaces({
@@ -10,30 +9,30 @@ const spaces = new Spaces.Spaces({
   bucket: options.space,
 });
 
-// https://elektron.fra1.digitaloceanspaces.com/captures/hello.jpg
+const dir = "files";
 
 module.exports = {
   async index(ctx, _next) {
     ctx.request.accepts("application/json");
     const files = await spaces.listFiles({
-      path: `captures/`,
+      path: `${dir}/`,
     });
     const processFile = (file) => {
       return `https://${options.cdn}/${file.Key}`;
     };
     ctx.response.send(files.Contents.map(processFile));
   },
+
   async upload(ctx, _next) {
     ctx.request.accepts("application/json");
+    const filename = ctx.request.body.filename;
     const file = imageDataURI.decode(ctx.request.body.src).dataBuffer;
-    //await writeFile("test2.jpg", buffer);
-    const s = await spaces.uploadFile({
-      pathname: "captures/hello2.jpg",
-      privacy: "public-read",
+    // { ETag: '"c3882c1a618aecef4faa3683be86c7a4"' }
+    await spaces.uploadFile({
+      pathname: `${dir}/${filename}`,
       file,
+      privacy: "public-read",
     });
-    console.log(s);
-
     ctx.response.send(ctx.request.body);
   },
 };
