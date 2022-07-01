@@ -11,6 +11,7 @@
     "@strapi/plugin-i18n": "4.0.7",
     "@strapi/plugin-users-permissions": "4.0.7",
     "@strapi/strapi": "4.0.7",
+    "do-spaces": "^1.1.1",
     "image-data-uri": "^2.0.1",
     "pg": "8.6.0",
     "pg-connection-string": "^2.5.0",
