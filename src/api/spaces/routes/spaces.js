@@ -13,11 +13,17 @@ module.exports = {
       handler: "spaces.upload",
       config: {
         middlewares: [
-          async (ctx, next) => {
-            //await body({ files: true })(ctx, () => {});
-            ctx.app.use(body());
-            console.log(ctx);
-            await next();
+          {
+            name: "strapi::body",
+            config: {
+              formLimit: "256mb",
+              jsonLimit: "256mb",
+              textLimit: "256mb",
+              formLimit: "256mb",
+              formidable: {
+                maxFileSize: 256 * 1024 * 1024,
+              },
+            },
           },
         ],
       },
