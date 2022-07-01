@@ -5,8 +5,7 @@ module.exports = {
   },
   async upload(ctx, _next) {
     //ctx.request.accepts("application/json");
-    console.log(ctx.request.files);
-    console.log(ctx.request.body);
+    console.log(ctx);
     ctx.response.send("OK");
   },
 };
