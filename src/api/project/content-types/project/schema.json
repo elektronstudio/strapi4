@@ -116,14 +116,6 @@
       },
       "type": "string"
     },
-    "details": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "text"
-    },
     "slug": {
       "pluginOptions": {
         "i18n": {
@@ -131,6 +123,14 @@
         }
       },
       "type": "uid"
+    },
+    "details": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
     }
   }
 }
