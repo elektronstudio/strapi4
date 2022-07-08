@@ -45,22 +45,6 @@
       "target": "api::event.event",
       "mappedBy": "projects"
     },
-    "streamkey": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "string"
-    },
-    "fienta_id": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "string"
-    },
     "pinned": {
       "pluginOptions": {
         "i18n": {
@@ -116,14 +100,6 @@
       },
       "type": "string"
     },
-    "details": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "text"
-    },
     "slug": {
       "pluginOptions": {
         "i18n": {
@@ -131,6 +107,14 @@
         }
       },
       "type": "uid"
+    },
+    "details": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
     }
   }
 }
