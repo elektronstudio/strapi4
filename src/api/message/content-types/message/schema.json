@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "messages",
+  "info": {
+    "singularName": "message",
+    "pluralName": "messages",
+    "displayName": "Message"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "channel": {
+      "type": "string"
+    },
+    "userid": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    },
+    "datetime": {
+      "type": "datetime"
+    },
+    "value": {
+      "type": "text"
+    }
+  }
+}
