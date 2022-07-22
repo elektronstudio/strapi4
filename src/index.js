@@ -1,19 +1,20 @@
 "use strict";
 
 const WebSocket = require("ws");
-const { $fetch } = require("ohmyfetch");
 
 module.exports = {
   register() {},
 
   bootstrap({ strapi }) {
     const wss = new WebSocket.Server({ server: strapi.server.httpServer });
+
     strapi.sendMessage = (message) =>
       wss.clients.forEach((client) => {
         if (client.readyState === WebSocket.OPEN) {
           client.send(JSON.stringify(message));
         }
       });
+
     strapi.storeMessage = async (message) => {
       const a = await strapi.entityService.create("api::message.message", {
         data: {
@@ -25,6 +26,7 @@ module.exports = {
         },
       });
     };
+
     strapi.wss = wss;
 
     wss.on("connection", (ws) => {
