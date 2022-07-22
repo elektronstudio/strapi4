@@ -42,7 +42,11 @@
       "type": "media",
       "multiple": true,
       "required": false,
-      "allowedTypes": ["images", "files", "videos"],
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -85,31 +89,18 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images", "files", "videos"],
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
       }
     },
-    "details": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "text"
-    },
-    "live": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "boolean",
-      "default": true
-    },
-    "settings": {
+    "controls": {
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -126,6 +117,22 @@
       "type": "richtext"
     },
     "intro": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
+    },
+    "authors": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string"
+    },
+    "details": {
       "pluginOptions": {
         "i18n": {
           "localized": true
