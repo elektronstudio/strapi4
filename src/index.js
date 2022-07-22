@@ -2,7 +2,6 @@
 
 const WebSocket = require("ws");
 const { $fetch } = require("ohmyfetch");
-// const { $fetch } = ohmyfetch.default;
 
 module.exports = {
   register() {},
@@ -25,7 +24,6 @@ module.exports = {
           value: message.value,
         },
       });
-      console.log(a);
     };
     strapi.wss = wss;
 
@@ -43,24 +41,5 @@ module.exports = {
         }
       });
     });
-
-    const url =
-      "https://vds27aojo9.execute-api.eu-north-1.amazonaws.com/default/GetElektronStats";
-    const xApiKey = "ftLPhkyMwY8ilqqrmzd9n9HyeYsgXKq7aROIucY9";
-
-    const getStats = async () => {
-      const stats = await $fetch(url, { headers: { "x-api-key": xApiKey } });
-      if (stats.length) {
-        const message = {
-          type: "STATS",
-          value: stats,
-          channel: "elektron",
-        };
-        strapi.sendMessage(message);
-        strapi.storeMessage(message);
-      }
-    };
-    getStats();
-    setInterval(getStats, 1000 * 60);
   },
 };
