@@ -26,6 +26,9 @@
     },
     "value": {
       "type": "text"
+    },
+    "timestamp": {
+      "type": "datetime"
     }
   }
 }
