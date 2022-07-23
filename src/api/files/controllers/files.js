@@ -9,8 +9,6 @@ const spaces = new Spaces.Spaces({
   bucket: options.space,
 });
 
-const dir = "files";
-
 module.exports = {
   async index(ctx, _next) {
     ctx.request.accepts("application/json");
@@ -31,11 +29,11 @@ module.exports = {
 
   async upload(ctx, _next) {
     ctx.request.accepts("application/json");
+    const path = ctx.request.params.path;
     const filename = ctx.request.body.filename;
     const file = imageDataURI.decode(ctx.request.body.src).dataBuffer;
-    // { ETag: '"c3882c1a618aecef4faa3683be86c7a4"' }
     await spaces.uploadFile({
-      pathname: `${dir}/${filename}`,
+      pathname: `${path}/${filename}`,
       file,
       privacy: "public-read",
     });

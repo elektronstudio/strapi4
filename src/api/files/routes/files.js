@@ -7,7 +7,7 @@ module.exports = {
     },
     {
       method: "PUT",
-      path: "/files/upload",
+      path: "/files/:path/upload",
       handler: "files.upload",
     },
   ],
