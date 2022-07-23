@@ -2,12 +2,12 @@ module.exports = {
   routes: [
     {
       method: "GET",
-      path: "/files",
+      path: "/files/:path",
       handler: "files.index",
     },
     {
       method: "PUT",
-      path: "/files/upload",
+      path: "/files/:path/upload",
       handler: "files.upload",
     },
   ],
