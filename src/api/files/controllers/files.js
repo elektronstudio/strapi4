@@ -14,14 +14,19 @@ const dir = "files";
 module.exports = {
   async index(ctx, _next) {
     ctx.request.accepts("application/json");
+    const path = ctx.request.params.path;
     const files = await spaces.listFiles({
-      path: `${dir}/`,
+      path: path + "/",
     });
     const processFile = (file) => {
       const filename = file.Key.replace(/.*\//, "");
       return { filename, src: `https://${options.cdn}/${file.Key}` };
     };
-    ctx.response.send(files.Contents.map(processFile).reverse());
+    ctx.response.send(
+      files.Contents.filter((f) => !f.Key.endsWith("/"))
+        .map(processFile)
+        .reverse()
+    );
   },
 
   async upload(ctx, _next) {

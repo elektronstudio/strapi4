@@ -2,7 +2,7 @@ module.exports = {
   routes: [
     {
       method: "GET",
-      path: "/files",
+      path: "/files/:path",
       handler: "files.index",
     },
     {
