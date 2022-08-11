@@ -18,7 +18,11 @@ module.exports = {
     });
     const processFile = (file) => {
       const filename = file.Key.replace(/.*\//, "");
-      return { filename, src: `https://${options.cdn}/${file.Key}` };
+      return {
+        filename,
+        src: `https://${options.cdn}/${file.Key}`,
+        modified_at: file.LastModified,
+      };
     };
     ctx.response.send(
       files.Contents.filter((f) => !f.Key.endsWith("/"))
