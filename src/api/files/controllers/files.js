@@ -9,28 +9,35 @@ const spaces = new Spaces.Spaces({
   bucket: options.space,
 });
 
-const dir = "files";
-
 module.exports = {
   async index(ctx, _next) {
     ctx.request.accepts("application/json");
+    const path = ctx.request.params.path;
     const files = await spaces.listFiles({
-      path: `${dir}/`,
+      path: path + "/",
     });
     const processFile = (file) => {
       const filename = file.Key.replace(/.*\//, "");
-      return { filename, src: `https://${options.cdn}/${file.Key}` };
+      return {
+        filename,
+        src: `https://${options.cdn}/${file.Key}`,
+        modified_at: file.LastModified,
+      };
     };
-    ctx.response.send(files.Contents.map(processFile).reverse());
+    ctx.response.send(
+      files.Contents.filter((f) => !f.Key.endsWith("/"))
+        .map(processFile)
+        .reverse()
+    );
   },
 
   async upload(ctx, _next) {
     ctx.request.accepts("application/json");
+    const path = ctx.request.params.path;
     const filename = ctx.request.body.filename;
     const file = imageDataURI.decode(ctx.request.body.src).dataBuffer;
-    // { ETag: '"c3882c1a618aecef4faa3683be86c7a4"' }
     await spaces.uploadFile({
-      pathname: `${dir}/${filename}`,
+      pathname: `${path}/${filename}`,
       file,
       privacy: "public-read",
     });
