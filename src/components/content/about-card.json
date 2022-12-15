@@ -12,7 +12,13 @@
     },
     "layout": {
       "type": "enumeration",
-      "enum": ["columns1", "columns2", "columns3", "columns4"],
+      "enum": [
+        "columns1",
+        "columns1-5",
+        "columns2",
+        "columns3",
+        "columns4"
+      ],
       "default": "columns1"
     },
     "content": {
