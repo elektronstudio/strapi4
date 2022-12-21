@@ -2,16 +2,30 @@
   "collectionName": "components_content_image_cards",
   "info": {
     "displayName": "ImageCard",
-    "icon": "image"
+    "icon": "image",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
-      "multiple": false
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": [
+        "columns1",
+        "columns1-5",
+        "columns2",
+        "columns3",
+        "columns4"
+      ],
+      "default": "columns1"
     }
   }
 }
