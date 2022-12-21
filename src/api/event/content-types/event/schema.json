@@ -156,6 +156,23 @@
       },
       "type": "string"
     },
+    "cards": {
+      "type": "dynamiczone",
+      "components": [
+        "content.about-card",
+        "content.external-link",
+        "content.image-card",
+        "content.media-card",
+        "content.person-card",
+        "content.related-page",
+        "content.title"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "backgroundImage": {
       "allowedTypes": [
         "images"
