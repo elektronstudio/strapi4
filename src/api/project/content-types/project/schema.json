@@ -66,9 +66,7 @@
       "multiple": false,
       "required": false,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos"
+        "images"
       ],
       "pluginOptions": {
         "i18n": {
@@ -117,8 +115,21 @@
       "type": "richtext"
     },
     "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "video": {
+      "allowedTypes": [
+        "videos"
       ],
       "type": "media",
       "multiple": false,
