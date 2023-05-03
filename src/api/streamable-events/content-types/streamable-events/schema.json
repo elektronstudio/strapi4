@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "streamable_eventss",
+  "info": {
+    "singularName": "streamable-events",
+    "pluralName": "streamable-eventss",
+    "displayName": "StreamableEvents"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "events": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event.event"
+    }
+  }
+}
