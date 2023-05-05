@@ -8,15 +8,15 @@
     "build": "strapi build"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.5.5",
-    "@strapi/plugin-users-permissions": "4.5.5",
-    "@strapi/strapi": "4.5.5",
+    "@strapi/plugin-i18n": "4.10.2",
+    "@strapi/plugin-users-permissions": "4.10.2",
+    "@strapi/strapi": "4.10.2",
     "do-spaces": "^1.1.1",
     "image-data-uri": "^2.0.1",
     "pg": "8.6.0",
     "pg-connection-string": "^2.5.0",
     "slugify": "^1.6.5",
-    "strapi-provider-upload-do": "^3.6.6",
+    "strapi-provider-upload-do": "^3.6.9",
     "ws": "^8.8.1"
   },
   "strapi": {
