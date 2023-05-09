@@ -128,16 +128,22 @@
       }
     },
     "video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "videos"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
+    },
+    "mainEvent": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::event.event"
     }
   }
 }
