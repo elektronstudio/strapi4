@@ -4,7 +4,8 @@
   "info": {
     "singularName": "streamable-events",
     "pluralName": "streamable-eventss",
-    "displayName": "StreamableEvents"
+    "displayName": "StreamableEvents",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -15,6 +16,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::event.event"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project"
     }
   }
 }

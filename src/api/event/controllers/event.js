@@ -84,7 +84,7 @@ module.exports = createCoreController("api::event.event", {
       );
       return {
         ...item,
-        streamUrl: streamAllowed ? liveStreams : null,
+        live: streamAllowed ? liveStreams : null,
       };
     });
 
