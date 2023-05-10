@@ -140,7 +140,24 @@
         }
       }
     },
+    "onlocation": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "boolean",
+      "default": false
+    },
     "online": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "boolean"
+    },
+    "haslive": {
       "pluginOptions": {
         "i18n": {
           "localized": false
