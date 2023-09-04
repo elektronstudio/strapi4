@@ -8,9 +8,9 @@
     "build": "strapi build"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.10.2",
-    "@strapi/plugin-users-permissions": "4.10.2",
-    "@strapi/strapi": "4.10.2",
+    "@strapi/plugin-i18n": "4.12.7",
+    "@strapi/plugin-users-permissions": "4.12.7",
+    "@strapi/strapi": "4.12.7",
     "do-spaces": "^1.1.1",
     "image-data-uri": "^2.0.1",
     "pg": "8.6.0",
