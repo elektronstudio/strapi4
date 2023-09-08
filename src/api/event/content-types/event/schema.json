@@ -250,6 +250,14 @@
         }
       },
       "type": "string"
+    },
+    "externalUrl": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }
