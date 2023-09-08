@@ -251,7 +251,7 @@
       },
       "type": "string"
     },
-    "externalUrl": {
+    "liveExternalUrl": {
       "pluginOptions": {
         "i18n": {
           "localized": true
