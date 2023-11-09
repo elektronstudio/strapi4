@@ -196,6 +196,14 @@
         }
       },
       "type": "richtext"
+    },
+    "vimeoId": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "biginteger"
     }
   }
 }
