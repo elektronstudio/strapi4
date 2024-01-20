@@ -257,7 +257,7 @@
           "localized": false
         }
       },
-      "type": "biginteger"
+      "type": "string"
     }
   }
 }
