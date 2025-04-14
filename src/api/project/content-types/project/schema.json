@@ -206,7 +206,12 @@
       "type": "biginteger"
     },
     "rank": {
-      "type": "integer"
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     }
   }
 }
