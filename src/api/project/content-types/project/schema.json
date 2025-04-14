@@ -204,6 +204,9 @@
         }
       },
       "type": "biginteger"
+    },
+    "rank": {
+      "type": "integer"
     }
   }
 }

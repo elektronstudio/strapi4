@@ -8,6 +8,7 @@
     "build": "strapi build"
   },
   "dependencies": {
+    "@retikolo/drag-drop-content-types": "^1.7.1",
     "@strapi/plugin-i18n": "4.12.7",
     "@strapi/plugin-users-permissions": "4.12.7",
     "@strapi/strapi": "4.12.7",

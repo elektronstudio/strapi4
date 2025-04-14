@@ -4,6 +4,9 @@ module.exports = ({ env }) => ({
       jwtSecret: env("JWT_SECRET", "c7f3098a9f1ecb1d9a1395ededbe4227"),
     },
   },
+  'drag-drop-content-types': {
+    enabled: true
+  },
   upload: {
     config: {
       provider: "strapi-provider-upload-do",
