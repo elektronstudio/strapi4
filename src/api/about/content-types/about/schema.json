@@ -24,7 +24,8 @@
         "content.related-page",
         "content.title",
         "content.image-card",
-        "content.external-link"
+        "content.external-link",
+        "content.artist-card"
       ],
       "pluginOptions": {
         "i18n": {

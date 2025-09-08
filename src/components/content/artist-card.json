@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_content_artist_cards",
+  "info": {
+    "displayName": "ArtistCard",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "projectPath": {
+      "type": "string"
+    }
+  }
+}
