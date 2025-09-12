@@ -30,7 +30,7 @@
       "component": "content.artist-card",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       }
     }
